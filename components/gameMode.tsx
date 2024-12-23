@@ -7,6 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 function GameMode() {
+  let TypeGame = "any";
   return (
     <div className="flex items-center justify-center gap-2">
       <p style={{ fontWeight: 800 }} className="text-center">
@@ -18,7 +19,14 @@ function GameMode() {
             <SelectValue placeholder="Classic" />
           </SelectTrigger>
           <SelectContent className="">
-            <SelectItem value="Classic">Classic</SelectItem>
+            <SelectItem
+              onClick={() => {
+                TypeGame = "Classic";
+              }}
+              value="Classic"
+            >
+              Classic
+            </SelectItem>
             <SelectItem value="dark">Dark</SelectItem>
             <SelectItem value="system">System</SelectItem>
           </SelectContent>

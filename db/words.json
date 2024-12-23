@@ -1,0 +1,36 @@
+{
+  "games": [
+    {
+      "words": "computadora",
+      "pista": [
+        "tecnología",
+        "dispositivo de trabajo",
+        "tiene teclado",
+        "pantalla",
+        "usa electricidad"
+      ]
+    },
+    {
+      "words": "bicicleta",
+      "pista": [
+        "vehículo",
+        "dos ruedas",
+        "pedales",
+        "deporte",
+        "transporte ecológico"
+      ]
+    },
+    {
+      "words": "montaña",
+      "pista": ["naturaleza", "elevación", "tierra", "cima", "senderismo"]
+    },
+    {
+      "words": "biblioteca",
+      "pista": ["libros", "lectura", "estudio", "silencio", "aprendizaje"]
+    },
+    {
+      "words": "guitarra",
+      "pista": ["instrumento", "música", "cuerdas", "melodía", "acústico"]
+    }
+  ]
+}
