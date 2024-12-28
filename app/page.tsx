@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import words from "@/db/words.json";
 import Game from "@/components/game";
 import AboutTheWin from "@/components/aboutWin";
+
 export default function Home() {
   const [initGame, setInitGame] = useState(false);
   const [winWord, setWinWord] = useState("");
@@ -34,6 +35,8 @@ export default function Home() {
 
     // storage donde dice que modo de juego es
     localStorage.setItem("modegame", "normal");
+    // storage donde dice si ya ganaste
+    localStorage.setItem("win", "false");
 
     setInitGame(true);
     const randomGame =
@@ -68,6 +71,10 @@ export default function Home() {
       console.log("You win!");
       setWin(true);
       setAttempts(listWords.length);
+      // acá nos dice si el juego todavia esta en cuerso
+      localStorage.setItem("initGame", "false");
+      localStorage.setItem("win", "true");
+
       return;
     }
 
@@ -95,6 +102,8 @@ export default function Home() {
    * - Retrieves the player's previous guesses and updates `listWords`.
    */
   useEffect(() => {
+    const winLocal = localStorage.getItem("win") === "true";
+    setWin(winLocal);
     // Load game initialization state
     const gameInit = localStorage.getItem("initGame") === "true";
     setInitGame(gameInit);
@@ -119,7 +128,7 @@ export default function Home() {
   if (win) {
     return (
       <>
-        <TitleWithOptions />
+        <TitleWithOptions win={win} />
         <AboutTheWin
           numberWord={attempts}
           wordOfTheWin={winWord}

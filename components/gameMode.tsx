@@ -27,8 +27,6 @@ function GameMode() {
             >
               Classic
             </SelectItem>
-            <SelectItem value="dark">Dark</SelectItem>
-            <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
       </div>

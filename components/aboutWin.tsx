@@ -19,6 +19,16 @@ function AboutTheWin({
   wordOfTheWin: String;
   listWord: { id: number; word: string }[];
 }) {
+  const newGame = () => {
+    localStorage.setItem("initGame", "false");
+    localStorage.removeItem("myArray");
+    localStorage.removeItem("modegame");
+    localStorage.removeItem("word");
+    localStorage.removeItem("idWord");
+    localStorage.removeItem("win");
+
+    window.location.reload();
+  };
   return (
     <div className="w-11/12 mx-auto text-center bg-my-primary rounded-md md:w-1/2 xl:w-2/5">
       <div className="space-y-6 py-6">
@@ -53,7 +63,7 @@ function AboutTheWin({
         </div>
         <div>puntos: 300</div>
         <div>timepo:00:00:00</div>
-        <Button>New game</Button>
+        <Button onClick={newGame}>New game</Button>
       </div>
     </div>
   );

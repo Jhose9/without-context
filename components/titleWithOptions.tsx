@@ -7,7 +7,6 @@ import { Sun } from "lucide-react";
 import { Globe } from "lucide-react";
 import { List } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useContext } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,10 +15,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ThemeContext } from "@/app/themeContext";
 
-function TitleWithOptions() {
-  const context = useContext(ThemeContext);
+function TitleWithOptions({ win }: { win?: boolean }) {
   const router = useRouter();
   const { setTheme, theme } = useTheme();
   const [btnSurrender, setBtnSurrender] = useState(false);
@@ -39,14 +36,13 @@ function TitleWithOptions() {
     const gameInit = localStorage.getItem("initGame");
     const booleanValue = gameInit === "true";
     setBtnSurrender(booleanValue);
-  }, []);
+  }, [win]);
 
   return (
     <div className="flex items-center justify-center gap-3 my-6">
       <h1
         onClick={() => {
           router.push("/");
-          console.log(context);
         }}
         style={{ fontWeight: 800 }}
         className="text-center text-3xl hover:cursor-pointer"
@@ -101,5 +97,3 @@ function TitleWithOptions() {
 }
 
 export default TitleWithOptions;
-
-//
