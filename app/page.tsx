@@ -16,6 +16,7 @@ export default function Home() {
   const [inputValue, setInputValue] = useState("");
   //number of attempts
   const [attempts, setAttempts] = useState(0);
+  const [numberHints, setNumberHints] = useState(0);
   const [win, setWin] = useState(false);
   const [listWords, setListWords] = useState<{ id: number; word: string }[]>(
     []
@@ -37,6 +38,9 @@ export default function Home() {
     localStorage.setItem("modegame", "normal");
     // storage donde dice si ya ganaste
     localStorage.setItem("win", "false");
+
+    // storage donde dice el numero de pistas que tuviste en la partida
+    localStorage.setItem("Hint", "0");
 
     setInitGame(true);
     const randomGame =
@@ -74,6 +78,7 @@ export default function Home() {
       // acá nos dice si el juego todavia esta en cuerso
       localStorage.setItem("initGame", "false");
       localStorage.setItem("win", "true");
+      window.location.reload();
 
       return;
     }
@@ -102,6 +107,9 @@ export default function Home() {
    * - Retrieves the player's previous guesses and updates `listWords`.
    */
   useEffect(() => {
+    const hints = localStorage.getItem("Hint");
+    if (hints) setNumberHints(parseInt(hints));
+    // dice si esta en la vista de vitoria
     const winLocal = localStorage.getItem("win") === "true";
     setWin(winLocal);
     // Load game initialization state
@@ -130,6 +138,7 @@ export default function Home() {
       <>
         <TitleWithOptions win={win} />
         <AboutTheWin
+          hints={numberHints}
           numberWord={attempts}
           wordOfTheWin={winWord}
           listWord={listWords}

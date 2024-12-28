@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -14,10 +14,12 @@ function AboutTheWin({
   numberWord,
   wordOfTheWin,
   listWord,
+  hints,
 }: {
   numberWord: number;
   wordOfTheWin: String;
   listWord: { id: number; word: string }[];
+  hints: number;
 }) {
   const newGame = () => {
     localStorage.setItem("initGame", "false");
@@ -26,9 +28,11 @@ function AboutTheWin({
     localStorage.removeItem("word");
     localStorage.removeItem("idWord");
     localStorage.removeItem("win");
+    localStorage.removeItem("Hint");
 
     window.location.reload();
   };
+
   return (
     <div className="w-11/12 mx-auto text-center bg-my-primary rounded-md md:w-1/2 xl:w-2/5">
       <div className="space-y-6 py-6">
@@ -40,10 +44,16 @@ function AboutTheWin({
         </div>
         <div>intentos: {numberWord}</div>
         <div>
-          <div>Pista</div>
+          <div>Intentos</div>
           <Dialog>
             <DialogTrigger>Show list</DialogTrigger>
-            <DialogContent className="max-h-[80vh] overflow-y-auto rounded-md dialog-scroll  ">
+            {/* 
+            max-h-[80vh] - Sets the maximum height of the element to 80% of the viewport height.
+            overflow-y-auto - Adds a vertical scrollbar if the content overflows vertically.
+            rounded-md - Rounds the corners of the element slightly for a softer appearance.
+            dialog-scroll - A custom global CSS class to style the scrollbar (e.g., size, color, or behavior).
+            */}
+            <DialogContent className="max-h-[80vh] overflow-y-auto rounded-md dialog-scroll">
               <DialogHeader>
                 <DialogTitle>Are you absolutely sure?</DialogTitle>
                 <DialogDescription asChild>
@@ -62,6 +72,7 @@ function AboutTheWin({
           </Dialog>
         </div>
         <div>puntos: 300</div>
+        <div>Numero de pistas: {hints}</div>
         <div>timepo:00:00:00</div>
         <Button onClick={newGame}>New game</Button>
       </div>
