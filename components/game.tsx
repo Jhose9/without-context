@@ -1,5 +1,6 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
+import WordComponet from "./wordComponet";
 
 function Game({
   inputValue,
@@ -24,7 +25,7 @@ function Game({
 
       <div>
         {listWords.map((item: any) => (
-          <div key={item.id}>{item.word}</div>
+          <WordComponet key={item.id} word={item.word} />
         ))}
       </div>
     </div>

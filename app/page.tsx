@@ -7,11 +7,15 @@ import QuestionsAnswers from "@/components/questionsAnswers";
 import { useEffect, useState } from "react";
 import words from "@/db/words.json";
 import Game from "@/components/game";
+import AboutTheWin from "@/components/aboutWin";
 export default function Home() {
   const [initGame, setInitGame] = useState(false);
-  const [winWord, setWinWord] = useState<String>();
+  const [winWord, setWinWord] = useState("");
   const [idCount, setIdCount] = useState(0);
   const [inputValue, setInputValue] = useState("");
+  //number of attempts
+  const [attempts, setAttempts] = useState(0);
+  const [win, setWin] = useState(false);
   const [listWords, setListWords] = useState<{ id: number; word: string }[]>(
     []
   );
@@ -62,6 +66,8 @@ export default function Home() {
     // Check if the word matches the winning word
     if (word === winWord) {
       console.log("You win!");
+      setWin(true);
+      setAttempts(listWords.length);
       return;
     }
 
@@ -110,10 +116,23 @@ export default function Home() {
     setListWords(storedWords);
   }, []);
 
-  return (
-    <div>
-      <TitleWithOptions />
-      {!initGame ? (
+  if (win) {
+    return (
+      <>
+        <TitleWithOptions />
+        <AboutTheWin
+          numberWord={attempts}
+          wordOfTheWin={winWord}
+          listWord={listWords}
+        />
+      </>
+    );
+  }
+
+  if (!initGame && !win) {
+    return (
+      <>
+        <TitleWithOptions />
         <div className="my-4 space-y-4">
           <div className="flex justify-center">
             <Button
@@ -125,16 +144,25 @@ export default function Home() {
           </div>
           <GameMode />
         </div>
-      ) : (
+        <HowToPlay />
+        <QuestionsAnswers />
+      </>
+    );
+  }
+
+  if (initGame && !win) {
+    return (
+      <>
+        <TitleWithOptions />
         <Game
           inputValue={inputValue}
           setInputValue={setInputValue}
           handleKeyEnter={handleKeyEnter}
           listWords={listWords}
         />
-      )}
-      <HowToPlay />
-      <QuestionsAnswers />
-    </div>
-  );
+        <HowToPlay />
+        <QuestionsAnswers />
+      </>
+    );
+  }
 }
