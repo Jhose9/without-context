@@ -27,7 +27,13 @@ import {
 import { Button } from "./ui/button";
 import WordComponet from "./wordComponet";
 
-function TitleWithOptions({ win }: { win?: boolean }) {
+function TitleWithOptions({
+  win,
+  initGame,
+}: {
+  win?: boolean;
+  initGame?: boolean;
+}) {
   const router = useRouter();
   const { setTheme, theme } = useTheme();
   const [btnSurrender, setBtnSurrender] = useState(false);
@@ -69,14 +75,15 @@ function TitleWithOptions({ win }: { win?: boolean }) {
     localStorage.removeItem("modegame");
     localStorage.removeItem("word");
     localStorage.removeItem("idWord");
-    localStorage.removeItem("Hint");  
+    localStorage.removeItem("Hint");
 
     window.location.reload();
   };
 
   const moreHint = () => {
     setNumberHint((prevNumber) => prevNumber + 1);
-    localStorage.setItem("Hint", `${numberHint}`);
+    let auxHint = numberHint + 1;
+    localStorage.setItem("Hint", `${auxHint}`);
   };
   useEffect(() => {
     const gameInit = localStorage.getItem("initGame");
@@ -85,7 +92,7 @@ function TitleWithOptions({ win }: { win?: boolean }) {
     setBtnSurrender(booleanValue);
     setHintButton(booleanValue);
     if (valueHint) setNumberHint(parseInt(valueHint));
-  }, [win]);
+  }, [win, initGame]);
 
   return (
     <div className="flex items-center justify-center gap-3 my-6">

@@ -47,7 +47,6 @@ export default function Home() {
       words.games[Math.floor(Math.random() * words.games.length)];
     console.log(randomGame.words);
     localStorage.setItem("word", `${randomGame.words}`);
-    window.location.reload();
   };
 
   /**
@@ -78,13 +77,12 @@ export default function Home() {
       // acá nos dice si el juego todavia esta en cuerso
       localStorage.setItem("initGame", "false");
       localStorage.setItem("win", "true");
-      window.location.reload();
-
+      addWordToList(word);
       return;
-    }
+    } 
 
     // Add the word to the list and update localStorage
-    addWordToList(word);
+    if (word !== "") addWordToList(word);
     setInputValue(""); // Clear the input field
   };
 
@@ -131,7 +129,7 @@ export default function Home() {
     // Load the list of player's previous guesses
     const storedWords = JSON.parse(localStorage.getItem("myArray") || "[]");
     setListWords(storedWords);
-  }, []);
+  }, [initGame, win]);
 
   if (win) {
     return (
@@ -171,7 +169,7 @@ export default function Home() {
   if (initGame && !win) {
     return (
       <>
-        <TitleWithOptions />
+        <TitleWithOptions initGame={initGame} />
         <Game
           inputValue={inputValue}
           setInputValue={setInputValue}
