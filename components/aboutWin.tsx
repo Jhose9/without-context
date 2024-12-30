@@ -17,8 +17,8 @@ function AboutTheWin({
   hints,
 }: {
   numberWord: number;
-  wordOfTheWin: String;
-  listWord: { id: number; word: String }[];
+  wordOfTheWin: string;
+  listWord: { id: number; word: string }[];
   hints: number;
 }) {
   const newGame = () => {

@@ -40,7 +40,7 @@ function TitleWithOptions({
   const [hintButton, setHintButton] = useState(false);
   const [mode, setMode] = useState("dark");
   //esto es de pruebas "estas son las pistas que tiene cada palabra"
-  const [TestHint, setTestHint] = useState([
+  const [TestHint] = useState([
     "naturaleza",
     "elevación",
     "tierra",
