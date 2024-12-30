@@ -6,7 +6,7 @@ function HowToPlay() {
       <div className="flex gap-2 items-center ">
         <CircleHelp size={35} />
         <h2 style={{ fontWeight: 800 }} className="text-xl">
-          Como jugar
+          how to play
         </h2>
       </div>
       <p>

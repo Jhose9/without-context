@@ -17,7 +17,7 @@ function Game({
     <div className="my-4 space-y-4 mx-auto w-4/5 md:w-1/2 xl:w-1/4">
       <Input
         type="search"
-        placeholder="Palabra"
+        placeholder="Word"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onKeyDown={handleKeyEnter}

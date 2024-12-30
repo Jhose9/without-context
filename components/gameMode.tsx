@@ -14,11 +14,12 @@ function GameMode() {
       </p>
       <div>
         <Select>
-          <SelectTrigger className="w-[6.6rem]">
-            <SelectValue placeholder="Classic" />
+          <SelectTrigger className="w-[9.6rem]">
+            <SelectValue placeholder="Classic-Spanish" />
           </SelectTrigger>
           <SelectContent className="">
-            <SelectItem value="Classic">Classic</SelectItem>
+            <SelectItem value="ClassicSpanish">Classic-Spanish</SelectItem>
+            <SelectItem value="ClassicEnglish">Classic-English</SelectItem>
           </SelectContent>
         </Select>
       </div>

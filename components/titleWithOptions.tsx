@@ -159,14 +159,16 @@ function TitleWithOptions({
               </DialogTrigger>
               <DialogContent className="max-h-[80vh] overflow-y-auto rounded-md dialog-scroll">
                 <DialogHeader>
-                  <DialogTitle>Are you absolutely sure?</DialogTitle>
+                  <DialogTitle className="text-center">
+                    Are you absolutely sure?
+                  </DialogTitle>
                   <DialogDescription asChild>
-                    <span>
+                    <span className="text-center">
                       {TestHint.slice(0, numberHint).map((item, index) => (
                         <WordComponet word={item} key={index} />
                       ))}
                       <Button onClick={moreHint} className="mt-4">
-                        More
+                        Show Hint
                       </Button>
                     </span>
                   </DialogDescription>

@@ -62,7 +62,8 @@ export default function Home() {
     if (event.key != "Enter") return;
 
     const { value } = event.target as HTMLInputElement;
-    const word = value.toLowerCase();
+    // el replace es para quitar los espacios en blanco que tengo el texto
+    const word = value.toLowerCase().replace(/\s+/g, "");
 
     if (listWords.some((item) => item.word === word)) {
       setInputValue(""); // Clear input if word is duplicated
@@ -73,11 +74,11 @@ export default function Home() {
     if (word === winWord) {
       console.log("You win!");
       setWin(true);
-      setAttempts(listWords.length);
       // acá nos dice si el juego todavia esta en cuerso
       localStorage.setItem("initGame", "false");
       localStorage.setItem("win", "true");
       addWordToList(word);
+      setAttempts(listWords.length + 1);
       return;
     }
 
