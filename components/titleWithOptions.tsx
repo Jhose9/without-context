@@ -82,7 +82,7 @@ function TitleWithOptions({
 
   const moreHint = () => {
     setNumberHint((prevNumber) => prevNumber + 1);
-    let auxHint = numberHint + 1;
+    const auxHint = numberHint + 1;
     localStorage.setItem("Hint", `${auxHint}`);
   };
   useEffect(() => {

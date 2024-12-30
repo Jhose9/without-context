@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -18,7 +18,7 @@ function AboutTheWin({
 }: {
   numberWord: number;
   wordOfTheWin: String;
-  listWord: { id: number; word: string }[];
+  listWord: { id: number; word: String }[];
   hints: number;
 }) {
   const newGame = () => {

@@ -58,10 +58,10 @@ export default function Home() {
    * - Updates the localStorage with the new list of words.
    * - Clears the input field after processing the word.
    */
-  const handleKeyEnter = (event: any) => {
+  const handleKeyEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key != "Enter") return;
 
-    const { value } = event.target;
+    const { value } = event.target as HTMLInputElement;
     const word = value.toLowerCase();
 
     if (listWords.some((item) => item.word === word)) {
@@ -79,7 +79,7 @@ export default function Home() {
       localStorage.setItem("win", "true");
       addWordToList(word);
       return;
-    } 
+    }
 
     // Add the word to the list and update localStorage
     if (word !== "") addWordToList(word);

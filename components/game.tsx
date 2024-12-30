@@ -8,10 +8,10 @@ function Game({
   handleKeyEnter,
   listWords,
 }: {
-  inputValue: any;
-  setInputValue: any;
-  handleKeyEnter: any;
-  listWords: any;
+  inputValue: string;
+  setInputValue: (value: string) => void;
+  handleKeyEnter: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+  listWords: { id: number; word: string }[];
 }) {
   return (
     <div className="my-4 space-y-4 mx-auto w-4/5 md:w-1/2 xl:w-1/4">
@@ -24,8 +24,8 @@ function Game({
       />
 
       <div>
-        {listWords.map((item: any) => (
-          <WordComponet key={item.id} word={item.word} />
+        {listWords.map(({ id, word }) => (
+          <WordComponet key={id} word={word} />
         ))}
       </div>
     </div>
