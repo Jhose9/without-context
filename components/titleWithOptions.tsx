@@ -30,43 +30,18 @@ import WordComponet from "./wordComponet";
 function TitleWithOptions({
   win,
   initGame,
+  hint,
 }: {
   win?: boolean;
   initGame?: boolean;
+  hint?: string[];
 }) {
   const router = useRouter();
   const { setTheme, theme } = useTheme();
   const [btnSurrender, setBtnSurrender] = useState(false);
   const [hintButton, setHintButton] = useState(false);
   const [mode, setMode] = useState("dark");
-  //esto es de pruebas "estas son las pistas que tiene cada palabra"
-  const [TestHint] = useState([
-    "naturaleza",
-    "elevación",
-    "tierra",
-    "cima",
-    "senderismo",
-    "bosque",
-    "montaña",
-    "río",
-    "valle",
-    "pradera",
-    "desierto",
-    "nieve",
-    "cascada",
-    "cueva",
-    "animales",
-    "viento",
-    "piedras",
-    "rocas",
-    "océano",
-    "lago",
-    "árboles",
-    "flor",
-    "cielo",
-    "estrella",
-    "amanecer",
-  ]);
+
   const [numberHint, setNumberHint] = useState(0);
 
   const surrender = () => {
@@ -164,7 +139,7 @@ function TitleWithOptions({
                   </DialogTitle>
                   <DialogDescription asChild>
                     <span className="text-center">
-                      {TestHint.slice(0, numberHint).map((item, index) => (
+                      {hint?.slice(0, numberHint).map((item, index) => (
                         <WordComponet word={item} key={index} />
                       ))}
                       <Button onClick={moreHint} className="mt-4">

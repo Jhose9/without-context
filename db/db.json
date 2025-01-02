@@ -1,114 +1,373 @@
 {
   "games": [
     {
-      "word": "computadora",
-      "pistas": [
-        "dispositivo electrónico",
-        "procesa información",
-        "tiene teclado",
-        "tiene pantalla",
-        "usa electricidad",
-        "tiene memoria RAM",
-        "tiene procesador",
-        "puede conectarse a internet",
-        "almacena archivos",
-        "tiene puertos USB",
-        "puede reproducir música",
-        "puede mostrar videos",
-        "tiene sistema operativo",
-        "puede ejecutar programas",
-        "tiene ventilador",
-        "tiene disco duro",
-        "puede imprimir documentos",
-        "tiene ratón",
-        "puede escanear documentos",
-        "tiene altavoces",
-        "puede grabar CDs",
-        "tiene tarjeta gráfica",
-        "puede conectarse a WiFi",
-        "tiene entrada de audio",
-        "puede usar bluetooth",
-        "tiene webcam",
-        "puede enviar emails",
-        "tiene antivirus",
-        "puede hacer cálculos",
-        "tiene navegador web",
-        "puede editar fotos",
-        "tiene programas de oficina",
-        "puede jugar videojuegos",
-        "tiene protector de pantalla",
-        "puede hacer videoconferencias",
-        "tiene corrector ortográfico",
-        "puede comprimir archivos",
-        "tiene calendario",
-        "puede programarse",
-        "tiene reloj",
-        "puede hacer copias de seguridad",
-        "tiene asistente virtual",
-        "puede traducir idiomas",
-        "tiene calculadora",
-        "puede grabar audio",
-        "tiene bloc de notas",
-        "puede crear presentaciones",
-        "tiene firewall",
-        "puede actualizar software",
-        "tiene control de volumen"
+      "words": "televisor",
+      "pista": [
+        "entretenimiento",
+        "pantalla",
+        "control remoto",
+        "programas",
+        "imágenes",
+        "sonido"
       ]
     },
     {
-      "word": "elefante",
-      "pistas": [
-        "animal grande",
-        "tiene trompa",
-        "tiene colmillos",
-        "es mamífero",
-        "vive en África",
-        "piel gruesa",
-        "come vegetales",
-        "tiene cuatro patas",
-        "orejas grandes",
-        "vive en manada",
-        "puede vivir 70 años",
-        "pesa toneladas",
-        "color gris",
-        "memoria excelente",
-        "animal terrestre",
-        "herbívoro",
-        "gestación larga",
-        "animal social",
-        "inteligente",
-        "puede usar herramientas",
-        "sensible",
-        "protector",
-        "matriarcado",
-        "buena memoria",
-        "rituales fúnebres",
-        "comunicación compleja",
-        "nada bien",
-        "no puede saltar",
-        "duerme poco",
-        "vulnerable",
-        "threatened species",
-        "thick skin",
-        "trunk has 40000 muscles",
-        "excellent sense of smell",
-        "can use trunk as snorkel",
-        "social bonds",
-        "recognize themselves in mirrors",
-        "show empathy",
-        "complex emotions",
-        "strong family ties",
-        "highly adaptable",
-        "good problem solvers",
-        "communicate through vibrations",
-        "can paint",
-        "unique fingerprints",
-        "fear of bees",
-        "excellent hearing",
-        "can walk silently",
-        "sweat through toenails",
-        "never forget faces"
+      "words": "elefante",
+      "pista": ["animal", "trompa", "grande", "gris", "colmillos", "África"]
+    },
+    {
+      "words": "teléfono",
+      "pista": [
+        "comunicación",
+        "llamadas",
+        "pantalla táctil",
+        "apps",
+        "portátil",
+        "batería"
       ]
+    },
+    {
+      "words": "paraguas",
+      "pista": ["lluvia", "protección", "plegable", "mango", "tela", "agua"]
+    },
+    {
+      "words": "chocolate",
+      "pista": ["dulce", "cacao", "postre", "marrón", "tableta", "golosina"]
+    },
+    {
+      "words": "helicóptero",
+      "pista": ["volar", "hélice", "transporte", "aire", "piloto", "vertical"]
+    },
+    {
+      "words": "refrigerador",
+      "pista": [
+        "cocina",
+        "frío",
+        "alimentos",
+        "electrodoméstico",
+        "conservar",
+        "hielo"
+      ]
+    },
+    {
+      "words": "dinosaurio",
+      "pista": [
+        "prehistórico",
+        "reptil",
+        "extinción",
+        "fósil",
+        "carnívoro",
+        "gigante"
+      ]
+    },
+    {
+      "words": "microscopio",
+      "pista": [
+        "ciencia",
+        "lentes",
+        "laboratorio",
+        "aumentar",
+        "observar",
+        "pequeño"
+      ]
+    },
+    {
+      "words": "ambulancia",
+      "pista": [
+        "emergencia",
+        "sirena",
+        "hospital",
+        "médicos",
+        "blanca",
+        "rápida"
+      ]
+    },
+    {
+      "words": "mariposa",
+      "pista": ["insecto", "alas", "colores", "volar", "metamorfosis", "jardín"]
+    },
+    {
+      "words": "escalera",
+      "pista": ["subir", "peldaños", "altura", "bajar", "metal", "vertical"]
+    },
+    {
+      "words": "calendario",
+      "pista": ["tiempo", "fechas", "meses", "días", "organizar", "planificar"]
+    },
+    {
+      "words": "diccionario",
+      "pista": [
+        "palabras",
+        "significados",
+        "libro",
+        "consulta",
+        "definiciones",
+        "alfabético"
+      ]
+    },
+    {
+      "words": "termómetro",
+      "pista": [
+        "temperatura",
+        "medida",
+        "fiebre",
+        "mercurio",
+        "grados",
+        "salud"
+      ]
+    },
+    {
+      "words": "dentista",
+      "pista": [
+        "dientes",
+        "doctor",
+        "consultorio",
+        "caries",
+        "limpieza",
+        "revisión"
+      ]
+    },
+    {
+      "words": "acuario",
+      "pista": ["peces", "agua", "cristal", "burbujas", "decoración", "marino"]
+    },
+    {
+      "words": "guantes",
+      "pista": ["manos", "protección", "frío", "ropa", "dedos", "calentar"]
+    },
+    {
+      "words": "pintura",
+      "pista": ["arte", "colores", "lienzo", "artista", "cuadro", "pinceles"]
+    },
+    {
+      "words": "botella",
+      "pista": [
+        "líquido",
+        "vidrio",
+        "tapa",
+        "bebida",
+        "contenedor",
+        "transportar"
+      ]
+    },
+    {
+      "words": "ventana",
+      "pista": ["cristal", "luz", "vista", "marco", "aire", "exterior"]
+    },
+    {
+      "words": "semáforo",
+      "pista": ["tráfico", "colores", "señal", "calle", "luces", "regula"]
+    },
+    {
+      "words": "calabaza",
+      "pista": [
+        "vegetal",
+        "naranja",
+        "Halloween",
+        "semillas",
+        "redonda",
+        "huerto"
+      ]
+    },
+    {
+      "words": "lavadora",
+      "pista": [
+        "ropa",
+        "limpieza",
+        "agua",
+        "detergente",
+        "electrodoméstico",
+        "ciclos"
+      ]
+    },
+    {
+      "words": "periódico",
+      "pista": [
+        "noticias",
+        "papel",
+        "información",
+        "diario",
+        "lectura",
+        "actualidad"
+      ]
+    },
+    {
+      "words": "sombrero",
+      "pista": ["cabeza", "protección", "sol", "moda", "accesorio", "ala"]
+    },
+    {
+      "words": "panadería",
+      "pista": ["pan", "horno", "tienda", "masa", "pasteles", "panadero"]
+    },
+    {
+      "words": "zapatillas",
+      "pista": ["calzado", "deporte", "cordones", "comodidad", "correr", "pies"]
+    },
+    {
+      "words": "bombero",
+      "pista": [
+        "fuego",
+        "héroe",
+        "manguera",
+        "uniforme",
+        "emergencia",
+        "rescate"
+      ]
+    },
+    {
+      "words": "carretera",
+      "pista": ["coches", "asfalto", "viaje", "transporte", "señales", "ruta"]
+    },
+    {
+      "words": "ballena",
+      "pista": ["océano", "mamífero", "grande", "mar", "aletas", "respiradero"]
+    },
+    {
+      "words": "lámpara",
+      "pista": [
+        "luz",
+        "bombilla",
+        "electricidad",
+        "iluminar",
+        "interruptor",
+        "decoración"
+      ]
+    },
+    {
+      "words": "astronauta",
+      "pista": [
+        "espacio",
+        "traje",
+        "nave",
+        "estrellas",
+        "gravedad",
+        "explorador"
+      ]
+    },
+    {
+      "words": "carpintero",
+      "pista": [
+        "madera",
+        "herramientas",
+        "muebles",
+        "martillo",
+        "sierra",
+        "oficio"
+      ]
+    },
+    {
+      "words": "camaleón",
+      "pista": ["reptil", "cambios", "colores", "ojos", "lengua", "camuflaje"]
+    },
+    {
+      "words": "pegamento",
+      "pista": ["unir", "adhesivo", "pegar", "tubo", "manualidades", "juntar"]
+    },
+    {
+      "words": "pescador",
+      "pista": ["peces", "caña", "mar", "red", "barco", "anzuelo"]
+    },
+    {
+      "words": "máscara",
+      "pista": [
+        "rostro",
+        "disfraz",
+        "carnaval",
+        "ocultar",
+        "protección",
+        "fiesta"
+      ]
+    },
+    {
+      "words": "relojero",
+      "pista": [
+        "tiempo",
+        "relojes",
+        "reparación",
+        "precisión",
+        "mecanismo",
+        "oficio"
+      ]
+    },
+    {
+      "words": "playa",
+      "pista": ["arena", "mar", "sol", "olas", "vacaciones", "sombrilla"]
+    },
+    {
+      "words": "palmera",
+      "pista": ["árbol", "cocos", "tropical", "playa", "hojas", "tronco"]
+    },
+    {
+      "words": "guepardo",
+      "pista": ["felino", "rápido", "manchas", "África", "cazador", "veloz"]
+    },
+    {
+      "words": "teclado",
+      "pista": [
+        "teclas",
+        "escribir",
+        "computadora",
+        "letras",
+        "digital",
+        "tipear"
+      ]
+    },
+    {
+      "words": "estación",
+      "pista": ["tren", "viaje", "andén", "pasajeros", "boletos", "transporte"]
+    },
+    {
+      "words": "payaso",
+      "pista": [
+        "circo",
+        "risa",
+        "maquillaje",
+        "nariz",
+        "diversión",
+        "espectáculo"
+      ]
+    },
+    {
+      "words": "escalador",
+      "pista": ["montaña", "cuerdas", "altura", "aventura", "deporte", "roca"]
+    },
+    {
+      "words": "jardinero",
+      "pista": [
+        "plantas",
+        "jardín",
+        "flores",
+        "riego",
+        "cultivo",
+        "herramientas"
+      ]
+    },
+    {
+      "words": "helado",
+      "pista": ["frío", "postre", "dulce", "sabores", "cono", "cremoso"]
+    },
+    {
+      "words": "molino",
+      "pista": ["viento", "aspas", "harina", "grano", "energía", "girar"]
+    },
+    {
+      "words": "arcoíris",
+      "pista": ["colores", "lluvia", "sol", "cielo", "fenómeno", "espectro"]
+    },
+    {
+      "words": "cohete",
+      "pista": [
+        "espacio",
+        "velocidad",
+        "combustible",
+        "despegue",
+        "astronautas",
+        "misión"
+      ]
+    },
+    {
+      "words": "volcán",
+      "pista": ["montaña", "lava", "erupción", "fuego", "ceniza", "geología"]
     }
   ]
 }

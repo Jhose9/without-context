@@ -21,6 +21,7 @@ export default function Home() {
   const [listWords, setListWords] = useState<{ id: number; word: string }[]>(
     []
   );
+  const [hint, setHint] = useState<string[]>([]);
 
   /**
    * Initializes the game with default settings.
@@ -45,8 +46,8 @@ export default function Home() {
     setInitGame(true);
     const randomGame =
       words.games[Math.floor(Math.random() * words.games.length)];
-    console.log(randomGame.words);
-    localStorage.setItem("word", `${randomGame.words}`);
+    const Word = { word: randomGame.words, hint: randomGame.pista };
+    localStorage.setItem("word", JSON.stringify(Word));
   };
 
   /**
@@ -118,7 +119,8 @@ export default function Home() {
     // Load the word to guess
     const wordToGuess = localStorage.getItem("word");
     if (wordToGuess) {
-      setWinWord(wordToGuess);
+      setWinWord(JSON.parse(wordToGuess).word);
+      setHint(JSON.parse(wordToGuess).hint);
     }
 
     // Load the current ID count
@@ -170,7 +172,7 @@ export default function Home() {
   if (initGame && !win) {
     return (
       <>
-        <TitleWithOptions initGame={initGame} />
+        <TitleWithOptions hint={hint} initGame={initGame} />
         <Game
           inputValue={inputValue}
           setInputValue={setInputValue}
